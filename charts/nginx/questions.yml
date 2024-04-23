@@ -9,6 +9,15 @@ questions:
         type: hostname
         required: true
         label: Hostname
+  - variable: service.type
+    description: "Kubernetes Service Type"
+    type: enum
+    options:
+      - "ClusterIP"
+      - "NodePort"
+      - "LoadBalancer"
+    label: Kubernetes Service Type
+    group: "Service Settings"
   - variable: autoscaling.enabled
     type: boolean
     label: Enable autoscaling
