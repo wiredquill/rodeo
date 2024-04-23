@@ -10,6 +10,15 @@ questions:
     description: "Enter the DNS name for the ingress endpoint. Leave the default to automatically generate a valid DNS name."
     type: string
     label: Ingress Endpoint DNS
+- variable: service.type
+    description: "Kubernetes Service Type"
+    type: enum
+    options:
+      - "ClusterIP"
+      - "NodePort"
+      - "LoadBalancer"
+    label: Kubernetes Service Type
+    group: "Service Settings"    
 - variable: app.localization.title
   description: "Customize the title displayed in the application UI"
   type: string
